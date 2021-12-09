@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+declare -i x=1
+
+
+
+mkdir data
+
+FILES=../data/Scenes2/*.json
+for f in $FILES
+do
+  echo "Processing $f file..."
+  ./SPHSimulator --no-gui --stopAt 5 $f
+  
+  x=x+1
+  
+  
+done
+
+echo "Done!"
