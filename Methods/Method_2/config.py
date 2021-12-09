@@ -1,7 +1,7 @@
 import os
 
 epoch = 10
-sample_folder = './data3'
+sample_folder = './data'
 file_list = os.listdir(sample_folder)
 for item in os.listdir(sample_folder):
     if len(item.split(r'.')) > 1:

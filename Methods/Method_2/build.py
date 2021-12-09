@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import shutil
 import os
 
-# 携带近邻网格的局部特征，逐帧计算
+
 def build_input(files, i):
     #final_data = []
     #final_label = []

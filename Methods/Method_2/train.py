@@ -8,7 +8,7 @@ from tools import *
 from tf_init import *
 from build import *
 
-# 准备数据集文件
+
 train_list = cfg.train_csv_list
 #train_list = train_list[:1]
 
@@ -16,7 +16,7 @@ train_list = cfg.train_csv_list
 
 with tf.Graph().as_default():
     with tf.Session(config=GPUInitial(cfg.GPU_MEMORY_FRACTION, cfg.GPU_AVAILABLE)) as sess:
-        # 定义模型
+
         model = Model(
             cfg.learning_rate,
             cfg.GPU_AVAILABLE.split(','),
@@ -27,7 +27,7 @@ with tf.Graph().as_default():
             cfg.RANDOM_NUMBER
         )
 
-        # 初始化模型/恢复模型
+
         paramInitial(model, sess, cfg.save_model_dir)
         summary_writer = tf.summary.FileWriter(cfg.log_dir, sess.graph)
 
@@ -56,7 +56,3 @@ with tf.Graph().as_default():
 
 
 
-            # 准备当前数据
-            # 训练
-            # 输出数据屏幕/文件
-            # 保存模型/log

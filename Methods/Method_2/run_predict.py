@@ -15,9 +15,7 @@ from tools import *
 from tf_init import *
 from build import *
 
-# 准备数据集文件
-#train_list = cfg.train_csv_list
-#train_list = train_list[:1]
+
 
 def build_input_data(data):
 

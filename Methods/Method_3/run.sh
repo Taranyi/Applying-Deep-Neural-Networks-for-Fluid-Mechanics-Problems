@@ -33,7 +33,7 @@ python -m model_demo
 # Run some training and evaluation in one of the dataset samples.
 
 # Download a sample of a dataset.
-DATASET_NAME="FluidShakeBox"
+DATASET_NAME="Water-3D"
 
 bash ./download_dataset.sh ${DATASET_NAME} "./datasets"
 
